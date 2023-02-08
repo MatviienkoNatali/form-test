@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"  content="form">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="body">
+<header></header>
+
+<main class="main">
+  <section>
+    <div class="container">
+      <div class="form">
+        <h3 class="form__description">Sign up for webinar and get our <span>complimentary checklist</span> for creating a perfect profile on LinkedIn!</h3>
+        <form action="vfdv.json" method="post">
+            <div class="form__group">
+              <input class="form__input required" type="text" id="firstName" placeholder=" " minlength="3" required>
+              <label class="placeholder" for="firstName">first Name</label>
+                <span class="error-message">First name must be at least 3 characters.</span>
+            </div>
+            <div class="form__group">
+              <input class="form__input required" type="text" id="lastName" placeholder=" " minlength="3" required>
+              <label class="placeholder" for="lastName">last Name</label>
+                <span class="error-message">Last name must be at least 3 characters.</span>
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="email" id="email" placeholder=" " required>
+              <label class="placeholder" for="email">email</label>
+            </div>
+            <div class="form__group">
+              <input class="form__input required" type="text" id="company" placeholder=" " minlength="3" required>
+              <label class="placeholder" for="company">company</label>
+                <span class="error-message">Name company must be at least 3 characters.</span>
+            </div>
+            <div class="form__agree">
+                <input type="checkbox" id="agreed" name="agreed" class="form__checkbox" required>
+                <label for="agreed">I want to receive more sales and lead generation insights and tips</label>
+            </div>
+            <div class="form__button">
+                <button class="button register-btn" type="submit">Register now</button>
+            </div>
+        </form>
+          <div class="privacy">
+              <p>We use this information to provide you with new content and updates. You may unsubscribe at any time. Check our
+                  <a href="#" target="_blank">Privacy Policy</a>.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

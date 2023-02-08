@@ -1,0 +1,193 @@
+.form{
+  color: $fontColor;
+  margin: 40px 0;
+  padding: 30px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  max-width: 470px;
+  @include md{
+    padding: 50px;
+    margin: 40px;
+  }
+  &__description{
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 30px;
+    @include sm{
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    span{
+      color: $secondColor;
+    }
+  }
+  &__group{
+    position: relative;
+    margin-bottom: 15px;
+    transition: .3s;
+    @include md{
+      margin-bottom: 20px;
+    }
+    &.error{
+      padding-bottom: 10px;
+      @include md{
+        padding-bottom: 15px;
+      }
+      .form__input{
+        border: 1px solid #ea4335;
+      }
+      .error-message{
+        display: block !important;
+      }
+    }
+  }
+  &__input{
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 50px;
+    padding: 16px 22px;
+    font-size: 12px;
+    transition: .3s;
+    @include sm{
+      font-size: 14px;
+    }
+    @include md{
+      font-size: 16px;
+      min-height: 70px;
+      padding: 23px 30px;
+    }
+    &:focus{
+      outline-color: $secondColor;
+    }
+    &:focus~.placeholder, &:not(:placeholder-shown)~.placeholder {
+      color: $secondColor;
+      font-size: 10px;
+      transform: translateY(-22px) translateX(0) scale(0.75);
+      @include md{
+        font-size: 12px;
+        transform: translateY(-32px) translateX(0) scale(0.75);
+      }
+    }
+    &:not(:placeholder-shown)~.placeholder {
+      //color: #C5C5C5;
+    }
+  }
+  .placeholder{
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    background-color: white;
+    padding: 0 5px;
+    top: 15px;
+    left: 17px;
+    text-transform: capitalize;
+    color: #C5C5C5;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    @include sm{
+      font-size: 16px;
+    }
+    @include md{
+      top: 23px;
+      left: 30px;
+    }
+  }
+  form{
+    max-width: 370px;
+    margin: 0 auto;
+  }
+  &__agree{
+    position: relative;
+    margin-bottom: 20px;
+    @include md{
+      margin-bottom: 30px;
+    }
+  }
+  &__checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+  }
+  &__checkbox+label {
+    display: inline-flex;
+    align-items: flex-start;
+    user-select: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    cursor: pointer;
+    @include md{
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  &__checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #141F34;
+    border-radius: 2px;
+    margin-right: 12px;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+    @include md{
+      width: 16px;
+      height: 16px;
+      border-width: 2px;
+      border-radius: 4px;
+    }
+  }
+  &__checkbox:checked+label::before {
+    border-color: $secondColor;
+    background-color: $secondColor;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+  &__checkbox:checked+label{
+    font-weight: 700;
+  }
+  &__button{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .privacy{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    color: #000000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    @include md{
+      font-size: 12px;
+    }
+    a{
+      color: $secondColor;
+      font-weight: 700;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .error-message{
+    color: #ea4335;
+    font-weight: 400;
+    font-size: 9px;
+    position: absolute;
+    bottom: -5px;
+    left: 1px;
+    @include md{
+      font-size: 12px;
+    }
+  }
+}
+
