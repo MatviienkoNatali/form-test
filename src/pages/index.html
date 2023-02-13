@@ -17,25 +17,25 @@
 <main class="main">
   <section>
     <div class="container">
-      <div class="form">
+      <div class="form__wrap">
         <h3 class="form__description">Sign up for webinar and get our <span>complimentary checklist</span> for creating a perfect profile on LinkedIn!</h3>
-        <form action="vfdv.json" method="post">
+        <form class="form">
             <div class="form__group">
-              <input class="form__input required" type="text" id="firstName" placeholder=" " minlength="3" required>
+              <input class="form__input required" name="firstName" type="text" id="firstName" placeholder=" " minlength="3" required>
               <label class="placeholder" for="firstName">first Name</label>
                 <span class="error-message">First name must be at least 3 characters.</span>
             </div>
             <div class="form__group">
-              <input class="form__input required" type="text" id="lastName" placeholder=" " minlength="3" required>
+              <input class="form__input required" name="lastName" type="text" id="lastName" placeholder=" " minlength="3" required>
               <label class="placeholder" for="lastName">last Name</label>
                 <span class="error-message">Last name must be at least 3 characters.</span>
             </div>
             <div class="form__group">
-              <input class="form__input" type="email" id="email" placeholder=" " required>
+              <input class="form__input" name="email" type="email" id="email" placeholder=" " required>
               <label class="placeholder" for="email">email</label>
             </div>
             <div class="form__group">
-              <input class="form__input required" type="text" id="company" placeholder=" " minlength="3" required>
+              <input class="form__input required" name="company" type="text" id="company" placeholder=" " minlength="3" required>
               <label class="placeholder" for="company">company</label>
                 <span class="error-message">Name company must be at least 3 characters.</span>
             </div>
